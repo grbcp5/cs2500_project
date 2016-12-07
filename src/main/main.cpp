@@ -10,21 +10,24 @@
  *
  ******************************************************************************/
 
+#define DEBUG 0
+
 #include <iostream>
+#include <stdio.h>
 #include "mergeSort/mergeSorter.h"
 
 using namespace std;
 
 int main()
 {
-  int a[] = {1, 2, 3};
-  const int size = 3;
+  int a[] = {8, -11, 15, 9, 4, 122, 95};
+  const int size = 7;
   Sorter<int> * sorter = new MergeSorter<int>();
 
-  sorter->(a, size);
+  sorter->sort(a, size);
 
   for(int i=0; i<size; i++)
-    cout << a[i] << ", ";
+    printf("%d: %d\n", i, a[i]);
   cout << endl;
 
   return 0;
