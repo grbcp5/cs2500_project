@@ -5,23 +5,24 @@
  *
  * Author:
  *   Grant Broadwater
+ *   Zachary Weicken
  *
  * Description:
  *
  ******************************************************************************/
 
 #include <iostream>
-#include "mergeSort/mergeSorter.h"
+#include "quicksort/quickSorter.h"
 
 using namespace std;
 
 int main()
 {
-  int a[] = {1, 2, 3};
-  const int size = 3;
-  Sorter<int> * sorter = new MergeSorter<int>();
+  int a[] = {4, 1, 3, 2};
+  const int size = 4;
+  Sorter<int> * sorter = new QuickSorter<int>();
 
-  sorter->(a, size);
+  sorter->sort(a, size);
 
   for(int i=0; i<size; i++)
     cout << a[i] << ", ";
