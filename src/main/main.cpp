@@ -11,21 +11,24 @@
  *
  ******************************************************************************/
 
+#define DEBUG 0
+
 #include <iostream>
-#include "quicksort/quickSorter.h"
+#include <stdio.h>
+#include "mergeSort/mergeSorter.h"
 
 using namespace std;
 
 int main()
 {
-  int a[] = {4, 1, 3, 2};
-  const int size = 4;
-  Sorter<int> * sorter = new QuickSorter<int>();
+  int a[] = {8, -11, 15, 9, 4, 122, 95};
+  const int size = 7;
+  Sorter<int> * sorter = new MergeSorter<int>();
 
   sorter->sort(a, size);
 
   for(int i=0; i<size; i++)
-    cout << a[i] << ", ";
+    printf("%d: %d\n", i, a[i]);
   cout << endl;
 
   return 0;
